@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --emerald-glow: rgba(16, 185, 129, 0.5);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  /* Fallback background/text in case Tailwind utilities fail to load */
+  background: #020617;
+  color: #f8fafc;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+@keyframes shield-flash {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(2.5); opacity: 0.5; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+@keyframes grid-breathe {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.25; }
+}
+
+@keyframes mini-shield-pulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0px rgba(16, 185, 129, 0)); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.6)); }
+}
+
+.animate-shield-mini {
+  animation: mini-shield-pulse 2s ease-in-out infinite;
+}
+
+.grid-pattern {
+  background-image: radial-gradient(rgba(16, 185, 129, 1) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+.animate-grid {
+  animation: grid-breathe 4s ease-in-out infinite;
+}
+
+.shield-flash-effect {
+  animation: shield-flash 0.8s ease-out forwards;
+}
+
+.custom-pulse-ring {
+  animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(16, 185, 129, 0.3); border-radius: 10px; }

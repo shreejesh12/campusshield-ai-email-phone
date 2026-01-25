@@ -1,0 +1,7 @@
+{
+  "name": "CampusShield AI",
+  "description": "An AI-powered digital safety assistant designed to detect phishing, scams, and fraudulent messages for students and seniors.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
